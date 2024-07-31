@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import Banner from './Components/Banner';
+import Details from './Components/Details';
+import Card from './Components/Card';
+import Footer from './Components/Footer';
+import BusinessCard from './Components/BusinessCard';
+import Shop from './Components/Shop';
+import ServicessNear from './Components/ServicessNear';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+   <Navbar/>
+   <Banner/>
+   <Details/>
+<Card/>
+    </Router>
+    <BusinessCard/>
+    <Shop/>
+    <ServicessNear/>
+    <Footer/>
+    </>
+ 
   );
 }
 
