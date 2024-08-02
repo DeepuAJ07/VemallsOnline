@@ -11,21 +11,30 @@ import Footer from './Components/Footer';
 import BusinessCard from './Components/BusinessCard';
 import Shop from './Components/Shop';
 import ServicessNear from './Components/ServicessNear';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 function App() {
   return (
     <>
     <Router>
-   <Navbar/>
+    <Navbar/>
+    <Routes>
+  <Route path='/login' element={<Login/>}/>
+  <Route path='/register' element={<Register/>}/>
+</Routes>
+
    <Banner/>
    <Details/>
 <Card/>
-    </Router>
+
+    
     <BusinessCard/>
     <Shop/>
     <ServicessNear/>
     <Footer/>
+    </Router>
     </>
  
   );

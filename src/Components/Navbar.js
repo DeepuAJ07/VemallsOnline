@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../assets/logo/logo.png';
 
 export default function Navbar() {
+  const Navigate = useNavigate()
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <Link class="navbar-brand" href="#">
+        <Link to='/' class="navbar-brand" href="#">
         <img src={logo} alt="VEMALLS" height='40px'className="mx-4"/>
         </Link>
         <button
@@ -51,7 +52,7 @@ export default function Navbar() {
                   <i>Homemade and Organic</i>
                 </Link>
               </li>
-              <button class="btn btn-primary p-2" type="submit">
+              <button onClick={()=>{Navigate('/login')}} class="btn btn-primary p-2" type="submit">
                 Login
               </button>
             </ul>
